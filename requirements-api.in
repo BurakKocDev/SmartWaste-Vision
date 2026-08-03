@@ -1,0 +1,8 @@
+# Install the CPU-only PyTorch pair first from the official PyTorch index:
+#   torch==2.12.1+cpu
+#   torchvision==0.27.1+cpu
+
+fastapi==0.139.2
+pillow==12.2.0
+python-multipart==0.0.32
+uvicorn==0.52.1

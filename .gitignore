@@ -1,0 +1,46 @@
+# Local datasets and generated data
+data/raw/**
+data/interim/**
+data/processed/**
+data/external/**
+
+# Keep the documented folder structure
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Local model and benchmark artifacts
+artifacts/**
+models/**
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-wsl/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local WSL/Python caches
+.coverage
+
+# Local environment and IDE files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
+# Flutter generated files
+.dart_tool/
+build/
+
+# Derived mobile weights: keep local until the RealWaste licence conflict is resolved
+apps/mobile/assets/models/*.tflite
+
+# Operating system files
+.DS_Store
+Thumbs.db

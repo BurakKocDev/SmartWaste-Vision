@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "seed": 20260803,
+  "ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "included_images": 3998,
+  "excluded_images": 754,
+  "excluded_by_source_class": {
+    "Textile Trash": 318,
+    "Vegetation": 436
+  },
+  "split_counts": {
+    "test": 598,
+    "train": 2800,
+    "validation": 600
+  },
+  "target_label_counts": {
+    "general_waste": {
+      "test": 74,
+      "train": 347,
+      "validation": 74
+    },
+    "glass": {
+      "test": 63,
+      "train": 294,
+      "validation": 63
+    },
+    "metal": {
+      "test": 118,
+      "train": 553,
+      "validation": 119
+    },
+    "organic": {
+      "test": 61,
+      "train": 288,
+      "validation": 62
+    },
+    "paper_cardboard": {
+      "test": 144,
+      "train": 673,
+      "validation": 144
+    },
+    "plastic": {
+      "test": 138,
+      "train": 645,
+      "validation": 138
+    }
+  },
+  "source_class_counts": {
+    "Cardboard": {
+      "test": 69,
+      "train": 323,
+      "validation": 69
+    },
+    "Food Organics": {
+      "test": 61,
+      "train": 288,
+      "validation": 62
+    },
+    "Glass": {
+      "test": 63,
+      "train": 294,
+      "validation": 63
+    },
+    "Metal": {
+      "test": 118,
+      "train": 553,
+      "validation": 119
+    },
+    "Miscellaneous Trash": {
+      "test": 74,
+      "train": 347,
+      "validation": 74
+    },
+    "Paper": {
+      "test": 75,
+      "train": 350,
+      "validation": 75
+    },
+    "Plastic": {
+      "test": 138,
+      "train": 645,
+      "validation": 138
+    }
+  },
+  "known_capture_group_count": 2,
+  "group_leakage_count": 0,
+  "calibration_images": 300,
+  "calibration_per_class": 50,
+  "split_manifest_sha256": "07dfa10bab6efa2f40d6d09437e8b4774e5494dff07bfd70aab6639cc52b5ae4"
+}

@@ -1,0 +1,746 @@
+{
+  "generated_at_utc": "2026-08-03T13:47:52.286659+00:00",
+  "dataset": "RealWaste",
+  "dataset_root": "data/raw/realwaste/realwaste-main/RealWaste",
+  "source_url": "https://archive.ics.uci.edu/dataset/908/realwaste",
+  "status": "pass",
+  "inventory_sha256": "116dba88a7234f88b3b744368f59c5d1488194e4412f8de767d7843c055742db",
+  "summary": {
+    "image_count": 4752,
+    "total_bytes": 688308374,
+    "total_mib": 656.42,
+    "class_count": 9,
+    "corrupt_count": 0,
+    "unsupported_count": 0,
+    "exact_duplicate_group_count": 0,
+    "exact_duplicate_file_count": 0,
+    "same_dhash_distinct_file_group_count": 0,
+    "same_phash_distinct_file_group_count": 0,
+    "near_dhash_pair_count": 2,
+    "near_dhash_threshold": 2,
+    "near_phash_pair_count": 72,
+    "near_phash_threshold": 6
+  },
+  "class_counts": {
+    "Cardboard": 461,
+    "Food Organics": 411,
+    "Glass": 420,
+    "Metal": 790,
+    "Miscellaneous Trash": 495,
+    "Paper": 500,
+    "Plastic": 921,
+    "Textile Trash": 318,
+    "Vegetation": 436
+  },
+  "expected_class_counts": {
+    "Cardboard": 461,
+    "Food Organics": 411,
+    "Glass": 420,
+    "Metal": 790,
+    "Miscellaneous Trash": 495,
+    "Paper": 500,
+    "Plastic": 921,
+    "Textile Trash": 318,
+    "Vegetation": 436
+  },
+  "expected_count_mismatches": {},
+  "unexpected_classes": [],
+  "missing_classes": [],
+  "suffix_counts": {
+    ".jpg": 4752
+  },
+  "format_counts": {
+    "JPEG": 4752
+  },
+  "mode_counts": {
+    "RGB": 4752
+  },
+  "dimension_counts": {
+    "524x524": 4752
+  },
+  "corrupt_files": [],
+  "unsupported_files": [],
+  "exact_duplicate_groups": [],
+  "same_dhash_distinct_file_groups": [],
+  "same_phash_distinct_file_groups": [],
+  "near_dhash_pairs": {
+    "count": 2,
+    "threshold": 2,
+    "examples_truncated": false,
+    "examples": [
+      {
+        "distance": 2,
+        "left_hash": "19c1e4c8d4d0d150",
+        "right_hash": "1dc1e4c8d0d0d150",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_81.jpg",
+        "right_example": "Food Organics/Food Organics_82.jpg"
+      },
+      {
+        "distance": 2,
+        "left_hash": "323272f3f3f3f3e3",
+        "right_hash": "3232f2f3f2f3f3e3",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Textile Trash/Textile Trash_172.jpg",
+        "right_example": "Metal/Metal_126.jpg"
+      }
+    ]
+  },
+  "near_phash_pairs": {
+    "count": 72,
+    "threshold": 6,
+    "examples_truncated": false,
+    "examples": [
+      {
+        "distance": 6,
+        "left_hash": "-77319c4e6199c664",
+        "right_hash": "-673198ce6139c668",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_301.jpg",
+        "right_example": "Plastic/Plastic_157.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-67389e6739986699",
+        "right_hash": "-63399e677198668a",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_668.jpg",
+        "right_example": "Plastic/Plastic_190.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-673198ce6139c668",
+        "right_hash": "-63339e0e6139c668",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_157.jpg",
+        "right_example": "Plastic/Plastic_227.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-637318ce67319c67",
+        "right_hash": "-43339cce67399867",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_102.jpg",
+        "right_example": "Cardboard/Cardboard_134.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5e3631c9cc66669a",
+        "right_hash": "-4e7631d96866669a",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_100.jpg",
+        "right_example": "Metal/Metal_435.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-5c33738c993366cd",
+        "right_hash": "-5c3362cc993366cf",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_73.jpg",
+        "right_example": "Food Organics/Food Organics_199.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5c33668c99736697",
+        "right_hash": "-5c3362cc993366cf",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_178.jpg",
+        "right_example": "Food Organics/Food Organics_199.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5b332cc732cccb32",
+        "right_hash": "-1b3264cf72cccb32",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_519.jpg",
+        "right_example": "Plastic/Plastic_542.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5b3324cc9333ccce",
+        "right_hash": "-4b3b2cc4b333cccd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_581.jpg",
+        "right_example": "Metal/Metal_112.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5a3267cd9933c61d",
+        "right_hash": "-1a3266cd1933e79d",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_126.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_249.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5a1b65659e96899a",
+        "right_hash": "-1a1a656d9696d99a",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_713.jpg",
+        "right_example": "Plastic/Plastic_121.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-591976666699999a",
+        "right_hash": "-4919336666d999da",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_227.jpg",
+        "right_example": "Plastic/Plastic_829.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-59197266cc993968",
+        "right_hash": "-4d1d3366cc993967",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_549.jpg",
+        "right_example": "Metal/Metal_546.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-58137364cc9b336e",
+        "right_hash": "-18137666cc9b31ee",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_225.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_485.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-5636694b93b46c6b",
+        "right_hash": "-1614694b93b46d7c",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Cardboard/Cardboard_81.jpg",
+        "right_example": "Cardboard/Cardboard_197.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-531a32676c19f318",
+        "right_hash": "-131a33676c59d31f",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_477.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_99.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f673298cf66309a",
+        "right_hash": "-4d273099cf66339a",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_106.jpg",
+        "right_example": "Food Organics/Food Organics_210.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f663199c666993d",
+        "right_hash": "-4f263199c72699af",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_129.jpg",
+        "right_example": "Plastic/Plastic_634.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f5b3064997333cd",
+        "right_hash": "-4f1b70643d7332cd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_799.jpg",
+        "right_example": "Metal/Metal_674.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4f4d3434c3d3cccd",
+        "right_hash": "-4f4b3434c393cdcd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_763.jpg",
+        "right_example": "Metal/Metal_738.jpg"
+      },
+      {
+        "distance": 2,
+        "left_hash": "-4f4d3434c3d3cccd",
+        "right_hash": "-4f493434c3d3ccce",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_763.jpg",
+        "right_example": "Plastic/Plastic_204.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4f4b3434c393cdcd",
+        "right_hash": "-4f493434c3d3ccce",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_738.jpg",
+        "right_example": "Plastic/Plastic_204.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f4b3434c393cdcd",
+        "right_hash": "-4b0a3434f393cdce",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_738.jpg",
+        "right_example": "Plastic/Plastic_186.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f3978463399ccc7",
+        "right_hash": "-4f193c663399cc67",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_735.jpg",
+        "right_example": "Metal/Metal_700.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f3931a6cc997267",
+        "right_hash": "-4d393366cc993367",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_202.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_401.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f3330cccf3334cd",
+        "right_hash": "-4f2331ccc73378cd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_597.jpg",
+        "right_example": "Metal/Metal_593.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f193c663399cc67",
+        "right_hash": "-473b2cc63399cc67",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_700.jpg",
+        "right_example": "Metal/Metal_345.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4f193c663399cc67",
+        "right_hash": "-471b6c64339bcc67",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_700.jpg",
+        "right_example": "Metal/Metal_193.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4e3839cf673238ca",
+        "right_hash": "-463239cde73239ca",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_197.jpg",
+        "right_example": "Metal/Metal_617.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4e3331cece3131cf",
+        "right_hash": "-e33334ecc3173cf",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_170.jpg",
+        "right_example": "Cardboard/Cardboard_358.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4e3139c733cccc34",
+        "right_hash": "-463939c73398cd34",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_127.jpg",
+        "right_example": "Metal/Metal_410.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4e26319bc66ccd37",
+        "right_hash": "-4e263199e766cc37",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Cardboard/Cardboard_83.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_119.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4d663299cc66339c",
+        "right_hash": "-4d273099cf66339a",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_28.jpg",
+        "right_example": "Food Organics/Food Organics_210.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4d663299cc66339c",
+        "right_hash": "-4c663399cd66323c",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_28.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_114.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4d663299cc66339c",
+        "right_hash": "-4c663399cc66669c",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_28.jpg",
+        "right_example": "Plastic/Plastic_85.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4d393366cc993367",
+        "right_hash": "-4d3933669c393367",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_401.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_70.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4d393366cc993367",
+        "right_hash": "-4d1d3366cc993967",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_401.jpg",
+        "right_example": "Metal/Metal_546.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4d3932c69939e667",
+        "right_hash": "-4d3932c699396734",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_232.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_111.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4d1d3332cccd3334",
+        "right_hash": "-4c1f3333cccc3334",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_230.jpg",
+        "right_example": "Plastic/Plastic_218.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4d1d3332cccd3334",
+        "right_hash": "-4c1f3333cccc3174",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_230.jpg",
+        "right_example": "Plastic/Plastic_216.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4d1d326663939bcd",
+        "right_hash": "-4d1d306663d91bce",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_223.jpg",
+        "right_example": "Metal/Metal_381.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c7633c9cc2666d4",
+        "right_hash": "-4c663399cc66669c",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_628.jpg",
+        "right_example": "Plastic/Plastic_85.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c663399cd66323c",
+        "right_hash": "-4c663399cc66669c",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_114.jpg",
+        "right_example": "Plastic/Plastic_85.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c59732673266767",
+        "right_hash": "-4c19636673667667",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_705.jpg",
+        "right_example": "Textile Trash/Textile Trash_219.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c59732673266767",
+        "right_hash": "-4c193366736666e7",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_705.jpg",
+        "right_example": "Metal/Metal_127.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c5972ce1373cccd",
+        "right_hash": "-4c1932cf3333dccd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_774.jpg",
+        "right_example": "Metal/Metal_697.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3f33328ccd3177",
+        "right_hash": "-4c1f3333cccc3174",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_251.jpg",
+        "right_example": "Plastic/Plastic_216.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3b7366ccd96227",
+        "right_hash": "-4c33334eccd9e627",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_242.jpg",
+        "right_example": "Metal/Metal_715.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3b3373cdcc3232",
+        "right_hash": "-4c3b3372cc8c3374",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_313.jpg",
+        "right_example": "Plastic/Plastic_255.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3b3373cdcc3232",
+        "right_hash": "-4c1f3333cccc3334",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_313.jpg",
+        "right_example": "Plastic/Plastic_218.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3b3372cc8c3374",
+        "right_hash": "-4c1f3333cccc3334",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_255.jpg",
+        "right_example": "Plastic/Plastic_218.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3b3372cc8c3374",
+        "right_hash": "-4c1f3333cccc3174",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_255.jpg",
+        "right_example": "Plastic/Plastic_216.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c3333cc3327cc74",
+        "right_hash": "-c3333ce333bcc34",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_97.jpg",
+        "right_example": "Glass/Glass_117.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4c2f3334cd9b8ccd",
+        "right_hash": "-4c0b3374cd9b8ecd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_559.jpg",
+        "right_example": "Cardboard/Cardboard_132.jpg"
+      },
+      {
+        "distance": 2,
+        "left_hash": "-4c1f3333cccc3334",
+        "right_hash": "-4c1f3333cccc3174",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_218.jpg",
+        "right_example": "Plastic/Plastic_216.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c1f3333cccc3334",
+        "right_hash": "-4c1c3333cccc33f7",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_218.jpg",
+        "right_example": "Plastic/Plastic_221.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c1f3333cccc3174",
+        "right_hash": "-4c1c3333cccc33f7",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_216.jpg",
+        "right_example": "Plastic/Plastic_221.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4c1b3324d99b9ecd",
+        "right_hash": "-4c0b3374cd9b8ecd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Cardboard/Cardboard_158.jpg",
+        "right_example": "Cardboard/Cardboard_132.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4c19636673667667",
+        "right_hash": "-4c193366736666e7",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Textile Trash/Textile Trash_219.jpg",
+        "right_example": "Metal/Metal_127.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-4b38766733cc9932",
+        "right_hash": "-4b38766731ce9962",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_199.jpg",
+        "right_example": "Plastic/Plastic_774.jpg"
+      },
+      {
+        "distance": 2,
+        "left_hash": "-4b193466d39bcc6d",
+        "right_hash": "-49193467d39bcc6d",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_655.jpg",
+        "right_example": "Metal/Metal_658.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-4919336666676dcd",
+        "right_hash": "-491933666666eee5",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_234.jpg",
+        "right_example": "Textile Trash/Textile Trash_213.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-473e3cc333cccc35",
+        "right_hash": "-433c3cc133cfcc3d",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_615.jpg",
+        "right_example": "Metal/Metal_431.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-473b2cc63399cc67",
+        "right_hash": "-471b6c64339bcc67",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_345.jpg",
+        "right_example": "Metal/Metal_193.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-473339cce6337949",
+        "right_hash": "-463a39ccc633794f",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Plastic/Plastic_688.jpg",
+        "right_example": "Plastic/Plastic_733.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-43663fb9b09a964d",
+        "right_hash": "-41663fb1b09b96cd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_82.jpg",
+        "right_example": "Food Organics/Food Organics_81.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-1d94794b67694e62",
+        "right_hash": "-1714794b66694e6e",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Miscellaneous Trash/Miscellaneous Trash_191.jpg",
+        "right_example": "Miscellaneous Trash/Miscellaneous Trash_194.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-1b7e64999326cccd",
+        "right_hash": "-1b666499db269ccd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_45.jpg",
+        "right_example": "Metal/Metal_31.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-196366cd9b3364cd",
+        "right_hash": "-96366cc99336cee",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_324.jpg",
+        "right_example": "Food Organics/Food Organics_104.jpg"
+      },
+      {
+        "distance": 4,
+        "left_hash": "-194f664c993366dd",
+        "right_hash": "-194666cc993366fd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_150.jpg",
+        "right_example": "Metal/Metal_326.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-194f664c993366dd",
+        "right_hash": "-95b664c997376cd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Food Organics/Food Organics_150.jpg",
+        "right_example": "Glass/Glass_294.jpg"
+      },
+      {
+        "distance": 6,
+        "left_hash": "-c4e6399cc66b3da",
+        "right_hash": "-c4e6399cc63f3cd",
+        "left_count": 1,
+        "right_count": 1,
+        "left_example": "Metal/Metal_217.jpg",
+        "right_example": "Metal/Metal_216.jpg"
+      }
+    ]
+  }
+}

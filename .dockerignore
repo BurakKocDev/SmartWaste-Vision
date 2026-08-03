@@ -1,0 +1,17 @@
+.git
+.github
+.cache
+.pytest_cache
+**/__pycache__
+**/*.pyc
+data/raw
+data/interim
+data/processed
+data/external
+apps/mobile/.dart_tool
+apps/mobile/build
+apps/mobile/android/.gradle
+artifacts/**
+!artifacts/training/
+!artifacts/training/mobilenet_v3_small_baseline/
+!artifacts/training/mobilenet_v3_small_baseline/best_model.pth

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="900" viewBox="0 0 1040 900">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#172033}.title{font-size:30px;font-weight:700}.subtitle{font-size:17px;fill:#536177}.label{font-size:15px;font-weight:600}.value{font-size:18px;font-weight:700}.axis{font-size:18px;font-weight:700;fill:#334155}</style>
+<text class="title" x="520" y="48" text-anchor="middle">SmartWaste Vision — Test Confusion Matrix</text>
+<text class="subtitle" x="520" y="78" text-anchor="middle">PyTorch FP32 · n=598 · Accuracy 90.80% · Macro F1 0.909</text>
+<text class="axis" x="526" y="115" text-anchor="middle">Predicted label</text>
+<text class="axis" transform="translate(55 426) rotate(-90)" text-anchor="middle">Actual label</text>
+<text class="label" x="296.0" y="128" text-anchor="middle" transform="rotate(-30 296.0 128)">Plastic</text>
+<text class="label" x="232" y="201.0" text-anchor="end">Plastic</text>
+<text class="label" x="388.0" y="128" text-anchor="middle" transform="rotate(-30 388.0 128)">Glass</text>
+<text class="label" x="232" y="293.0" text-anchor="end">Glass</text>
+<text class="label" x="480.0" y="128" text-anchor="middle" transform="rotate(-30 480.0 128)">Metal</text>
+<text class="label" x="232" y="385.0" text-anchor="end">Metal</text>
+<text class="label" x="572.0" y="128" text-anchor="middle" transform="rotate(-30 572.0 128)">Paper/cardboard</text>
+<text class="label" x="232" y="477.0" text-anchor="end">Paper/cardboard</text>
+<text class="label" x="664.0" y="128" text-anchor="middle" transform="rotate(-30 664.0 128)">Organic</text>
+<text class="label" x="232" y="569.0" text-anchor="end">Organic</text>
+<text class="label" x="756.0" y="128" text-anchor="middle" transform="rotate(-30 756.0 128)">General waste</text>
+<text class="label" x="232" y="661.0" text-anchor="end">General waste</text>
+<rect x="250" y="150" width="92" height="92" fill="rgb(76,116,225)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="296.0" y="193.0" text-anchor="middle" style="fill:#ffffff">107</text>
+<text x="296.0" y="216.0" text-anchor="middle" style="fill:#ffffff;font-size:13px">77.5%</text>
+<rect x="342" y="150" width="92" height="92" fill="rgb(231,240,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="388.0" y="193.0" text-anchor="middle" style="fill:#172033">5</text>
+<text x="388.0" y="216.0" text-anchor="middle" style="fill:#172033;font-size:13px">3.6%</text>
+<rect x="434" y="150" width="92" height="92" fill="rgb(215,227,250)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="480.0" y="193.0" text-anchor="middle" style="fill:#172033">16</text>
+<text x="480.0" y="216.0" text-anchor="middle" style="fill:#172033;font-size:13px">11.6%</text>
+<rect x="526" y="150" width="92" height="92" fill="rgb(231,240,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="572.0" y="193.0" text-anchor="middle" style="fill:#172033">5</text>
+<text x="572.0" y="216.0" text-anchor="middle" style="fill:#172033;font-size:13px">3.6%</text>
+<rect x="618" y="150" width="92" height="92" fill="rgb(233,241,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="664.0" y="193.0" text-anchor="middle" style="fill:#172033">4</text>
+<text x="664.0" y="216.0" text-anchor="middle" style="fill:#172033;font-size:13px">2.9%</text>
+<rect x="710" y="150" width="92" height="92" fill="rgb(237,245,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="756.0" y="193.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="756.0" y="216.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.7%</text>
+<rect x="250" y="242" width="92" height="92" fill="rgb(236,243,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="296.0" y="285.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="296.0" y="308.0" text-anchor="middle" style="fill:#172033;font-size:13px">1.6%</text>
+<rect x="342" y="242" width="92" height="92" fill="rgb(39,86,218)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="388.0" y="285.0" text-anchor="middle" style="fill:#ffffff">60</text>
+<text x="388.0" y="308.0" text-anchor="middle" style="fill:#ffffff;font-size:13px">95.2%</text>
+<rect x="434" y="242" width="92" height="92" fill="rgb(232,241,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="480.0" y="285.0" text-anchor="middle" style="fill:#172033">2</text>
+<text x="480.0" y="308.0" text-anchor="middle" style="fill:#172033;font-size:13px">3.2%</text>
+<rect x="526" y="242" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="572.0" y="285.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="572.0" y="308.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="618" y="242" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="664.0" y="285.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="664.0" y="308.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="710" y="242" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="756.0" y="285.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="756.0" y="308.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="250" y="334" width="92" height="92" fill="rgb(235,243,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="296.0" y="377.0" text-anchor="middle" style="fill:#172033">2</text>
+<text x="296.0" y="400.0" text-anchor="middle" style="fill:#172033;font-size:13px">1.7%</text>
+<rect x="342" y="334" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="388.0" y="377.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="388.0" y="400.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="434" y="334" width="92" height="92" fill="rgb(34,82,217)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="480.0" y="377.0" text-anchor="middle" style="fill:#ffffff">115</text>
+<text x="480.0" y="400.0" text-anchor="middle" style="fill:#ffffff;font-size:13px">97.5%</text>
+<rect x="526" y="334" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="572.0" y="377.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="572.0" y="400.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="618" y="334" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="664.0" y="377.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="664.0" y="400.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="710" y="334" width="92" height="92" fill="rgb(237,245,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="756.0" y="377.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="756.0" y="400.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.8%</text>
+<rect x="250" y="426" width="92" height="92" fill="rgb(235,242,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="296.0" y="469.0" text-anchor="middle" style="fill:#172033">3</text>
+<text x="296.0" y="492.0" text-anchor="middle" style="fill:#172033;font-size:13px">2.1%</text>
+<rect x="342" y="426" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="388.0" y="469.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="388.0" y="492.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="434" y="426" width="92" height="92" fill="rgb(238,245,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="480.0" y="469.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="480.0" y="492.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.7%</text>
+<rect x="526" y="426" width="92" height="92" fill="rgb(36,84,217)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="572.0" y="469.0" text-anchor="middle" style="fill:#ffffff">139</text>
+<text x="572.0" y="492.0" text-anchor="middle" style="fill:#ffffff;font-size:13px">96.5%</text>
+<rect x="618" y="426" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="664.0" y="469.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="664.0" y="492.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="710" y="426" width="92" height="92" fill="rgb(238,245,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="756.0" y="469.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="756.0" y="492.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.7%</text>
+<rect x="250" y="518" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="296.0" y="561.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="296.0" y="584.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="342" y="518" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="388.0" y="561.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="388.0" y="584.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="434" y="518" width="92" height="92" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="480.0" y="561.0" text-anchor="middle" style="fill:#172033">0</text>
+<text x="480.0" y="584.0" text-anchor="middle" style="fill:#172033;font-size:13px">0.0%</text>
+<rect x="526" y="518" width="92" height="92" fill="rgb(236,243,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="572.0" y="561.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="572.0" y="584.0" text-anchor="middle" style="fill:#172033;font-size:13px">1.6%</text>
+<rect x="618" y="518" width="92" height="92" fill="rgb(36,84,217)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="664.0" y="561.0" text-anchor="middle" style="fill:#ffffff">59</text>
+<text x="664.0" y="584.0" text-anchor="middle" style="fill:#ffffff;font-size:13px">96.7%</text>
+<rect x="710" y="518" width="92" height="92" fill="rgb(236,243,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="756.0" y="561.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="756.0" y="584.0" text-anchor="middle" style="fill:#172033;font-size:13px">1.6%</text>
+<rect x="250" y="610" width="92" height="92" fill="rgb(230,239,253)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="296.0" y="653.0" text-anchor="middle" style="fill:#172033">3</text>
+<text x="296.0" y="676.0" text-anchor="middle" style="fill:#172033;font-size:13px">4.1%</text>
+<rect x="342" y="610" width="92" height="92" fill="rgb(236,244,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="388.0" y="653.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="388.0" y="676.0" text-anchor="middle" style="fill:#172033;font-size:13px">1.4%</text>
+<rect x="434" y="610" width="92" height="92" fill="rgb(230,239,253)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="480.0" y="653.0" text-anchor="middle" style="fill:#172033">3</text>
+<text x="480.0" y="676.0" text-anchor="middle" style="fill:#172033;font-size:13px">4.1%</text>
+<rect x="526" y="610" width="92" height="92" fill="rgb(236,244,254)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="572.0" y="653.0" text-anchor="middle" style="fill:#172033">1</text>
+<text x="572.0" y="676.0" text-anchor="middle" style="fill:#172033;font-size:13px">1.4%</text>
+<rect x="618" y="610" width="92" height="92" fill="rgb(230,239,253)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="664.0" y="653.0" text-anchor="middle" style="fill:#172033">3</text>
+<text x="664.0" y="676.0" text-anchor="middle" style="fill:#172033;font-size:13px">4.1%</text>
+<rect x="710" y="610" width="92" height="92" fill="rgb(60,103,222)" stroke="#ffffff" stroke-width="2" rx="5"/>
+<text class="value" x="756.0" y="653.0" text-anchor="middle" style="fill:#ffffff">63</text>
+<text x="756.0" y="676.0" text-anchor="middle" style="fill:#ffffff;font-size:13px">85.1%</text>
+<text class="subtitle" x="520" y="850" text-anchor="middle">Rows are actual classes; columns are predictions. Percentages are normalized per row.</text>
+</svg>

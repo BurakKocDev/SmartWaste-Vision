@@ -1,0 +1,15 @@
+# SmartWaste Vision conversion-spike environment (Linux/WSL)
+#
+# Install the CPU-only PyTorch pair first from the official PyTorch CPU index:
+#   torch==2.12.1+cpu
+#   torchvision==0.27.1+cpu
+#
+# Then install this file from PyPI. A full resolved lock is generated after the
+# conversion gate succeeds.
+
+litert-torch==0.9.2
+onnx>=1.18,<2
+onnxruntime==1.28.0
+onnxscript>=0.5,<1
+pillow>=12,<13
+pytest>=9,<10

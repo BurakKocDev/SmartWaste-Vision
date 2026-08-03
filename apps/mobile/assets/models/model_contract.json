@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "model_id": "mobilenet_v3_small_realwaste_baseline_epoch_11",
+  "variant": "litert_fp16_android_inline_buffers",
+  "asset": "assets/models/smartwaste_fp16.tflite",
+  "sha256": "f4c93f2d7ded0e69af27e3ac0cd77ed7b8c9501c89e692910b77f8efac61de64",
+  "source_sha256": "b453d7c57423701e54e4dcdf4a08484716f671ac542f316cb0c156c8dfed2260",
+  "compatibility": {
+    "constant_buffer_storage": "inline",
+    "repacked_from_offset_backed_model": true,
+    "logit_parity_max_abs_error": 0.0
+  },
+  "labels": [
+    "plastic",
+    "glass",
+    "metal",
+    "paper_cardboard",
+    "organic",
+    "general_waste"
+  ],
+  "input": {
+    "shape": [1, 3, 224, 224],
+    "layout": "NCHW",
+    "dtype": "float32",
+    "resize_shorter_side": 256,
+    "resize_interpolation": "pillow_bilinear_antialias",
+    "center_crop": [224, 224],
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225]
+  },
+  "output": {
+    "shape": [1, 6],
+    "dtype": "float32",
+    "semantics": "logits"
+  },
+  "confidence": {
+    "method": "maximum_softmax_probability",
+    "low_confidence_threshold": 0.51,
+    "selection_split": "validation",
+    "validation_coverage": 0.885,
+    "accepted_accuracy": 0.9510357815442562
+  }
+}
