@@ -1,6 +1,0 @@
-SmartWaste Vision README Paketi
-
-1. Eski README.md dosyasını bu paketteki README.md ile değiştir.
-2. Eski README.en.md dosyasını bu paketteki README.en.md ile değiştir.
-3. docs/assets altındaki mevcut görselleri ve demo videosunu silme.
-4. Önerilen commit mesajı: Polish SmartWaste Vision documentation
