@@ -1,88 +1,158 @@
+<div align="center">
+
 # SmartWaste Vision
+
+### An end-to-end Edge AI application for offline waste classification
+
+A computer vision project that deploys the same image classifier across  
+**PyTorch**, **ONNX Runtime**, and **LiteRT / TensorFlow Lite**, then integrates it into a fully offline Flutter application.
 
 English · [Türkçe](README.md)
 
-SmartWaste Vision classifies one dominant waste object from a photo and deploys
-the same trained model across PyTorch, ONNX Runtime, and LiteRT/TensorFlow Lite.
-The project compares accuracy, Macro F1, model size, latency, and memory while
-keeping the Android user experience fully offline.
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-MobileNetV3--Small-EE4C2C?logo=pytorch&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-Android-02569B?logo=flutter&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Reference_API-009688?logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)
+![License](https://img.shields.io/badge/Dataset_License-Review_Required-orange)
 
-> Portfolio claim: I deployed the same image classifier to server, desktop CPU,
-> and Android edge environments and compared its accuracy, latency, memory, and
-> storage trade-offs.
+</div>
 
-## Status
+---
 
-- Date: 4 August 2026
-- Data audit and deterministic split: complete
-- MobileNetV3-Small transfer learning and frozen test evaluation: complete
-- ONNX FP32, LiteRT FP16, and LiteRT INT8 weight-only exports: accepted
-- Full-INT8 PTQ exports: rejected by the quality gate, not deployed
-- Modern Flutter camera/gallery UI plus debug and release-mode test APKs: complete; Android emulator smoke tests passed
-- Dockerised PyTorch/FastAPI reference service: verified with a real JPEG
-- Final demo video: complete
-- Remaining: physical Android latency/RAM run
+## Overview
 
-## Mobile interface
+SmartWaste Vision classifies one dominant waste object from a photo into one of six categories:
 
-| Home | Prediction result |
+- Plastic
+- Glass
+- Metal
+- Paper / cardboard
+- Organic
+- General waste
+
+The project focuses not only on classification accuracy, but also on measuring how the same trained model changes across deployment environments in terms of **accuracy, Macro F1, model size, and latency**.
+
+The mobile application performs inference entirely on-device. Images are not uploaded to a server.
+
+---
+
+## Mobile Application
+
+| Home screen | Prediction result |
 |---|---|
 | ![SmartWaste Vision home screen](docs/assets/mobile-home-v2.png) | ![SmartWaste Vision prediction result](docs/assets/mobile-result-v2.png) |
 
-The interface exposes offline status, a focused capture surface, class and bin
-guidance, the top three probabilities, and a separate low-confidence recovery
-experience.
+The application:
 
-[Watch the final demo video](docs/assets/smartwaste-vision-demo-tr.mp4)
+- Accepts images from the camera or gallery
+- Runs inference directly on the Android device
+- Displays the predicted class, confidence score, and top three probabilities
+- Maps predictions to Turkish Zero Waste bin colours
+- Avoids overconfident output when confidence is below `0.51`
+- Can operate in airplane mode without network access
 
-## MVP scope
+### Demo
 
-- Six classes: plastic, glass, metal, paper/cardboard, organic, general waste
-- One ImageNet-pretrained `MobileNetV3-Small`, fine-tuned with PyTorch
-- PyTorch FP32, ONNX FP32, LiteRT FP16, and INT8 storage experiments
-- Accuracy, Macro F1, size, mean/p95 latency, and process memory comparison
-- Android-first Flutter app with camera/gallery, confidence, bin colour,
-  abstention below `0.51`, and fully offline inference
-- Small Dockerised PyTorch/FastAPI reference API
+[Watch the SmartWaste Vision mobile demo](docs/assets/smartwaste-vision-demo-tr.mp4)
 
-Object detection, segmentation, live conveyor video, maps, rewards, accounts,
-and an admin panel are explicitly out of scope.
+---
 
 ## Results
 
-Frozen 598-image test split:
+Evaluation was performed on a fixed **598-image test split**.
 
-| Runtime | Accuracy | Macro F1 | Size | Mean / p95 CPU |
+| Runtime | Accuracy | Macro F1 | Model size | Mean / p95 CPU |
 |---|---:|---:|---:|---:|
-| PyTorch FP32 | 90.80% | 0.9093 | 5.95 MiB | 5.24 / 6.17 ms |
-| ONNX FP32 | 90.80% | 0.9093 | 6.08 MiB | 1.35 / 1.79 ms |
+| PyTorch FP32 | **90.80%** | **0.9093** | 5.95 MiB | 5.24 / 6.17 ms |
+| ONNX Runtime FP32 | **90.80%** | **0.9093** | 6.08 MiB | 1.35 / 1.79 ms |
 | LiteRT FP16 | 90.64% | 0.9074 | 3.07 MiB | 6.80 / 8.11 ms |
-| LiteRT INT8 weight-only | 89.80% | 0.8989 | 1.75 MiB | 0.67 / 0.95 ms |
+| LiteRT INT8 weight-only | 89.80% | 0.8989 | **1.75 MiB** | **0.67 / 0.95 ms** |
 
-CPU latency was measured on an Intel i5-11400H under WSL2, batch 1, four
-threads, excluding decode and preprocessing. The Flutter model with actual Dart
-preprocessing reaches 90.47% Accuracy and 0.9056 Macro F1. Weight-only INT8
-stores quantised weights but still uses float input/output and compute; it is not
-claimed as full-integer inference. See the
-[benchmark protocol and results](docs/benchmarks/02-cpu-baseline-results.md).
+CPU benchmarks were measured on an Intel i5-11400H under WSL2, with batch size 1 and four threads, excluding image decoding and preprocessing.
+
+The FP16 model used by the Flutter application, including the actual Dart preprocessing pipeline, achieved:
+
+- **Accuracy:** 90.47%
+- **Macro F1:** 0.9056
+
+Full-INT8 exports did not pass the quality gate and were not deployed. The INT8 weight-only model stores quantised weights but should not be interpreted as full-integer inference.
 
 ![Test confusion matrix](docs/assets/confusion_matrix.svg)
 
-## Application behaviour
+For the full benchmark protocol and measurement conditions, see:  
+[CPU Benchmark Report](docs/benchmarks/02-cpu-baseline-results.md)
 
-The Flutter client embeds the accepted FP16 model. It takes a photo or gallery
-image, performs Pillow-compatible antialiased preprocessing in Dart, displays
-the class and softmax confidence, and maps the result to the Turkish Zero Waste
-bin colours. Scores below `0.51` are shown as “I'm not sure.” Images never leave
-the device.
+---
 
-The Docker API is deliberately separate. It demonstrates server deployment of
-the same FP32 checkpoint through `GET /health` and multipart
-`POST /v1/classify`.
+## System Architecture
 
-## Quick start
+```mermaid
+flowchart LR
+    A[Waste Image] --> B[Training with PyTorch]
+    B --> C[MobileNetV3-Small]
+    C --> D[PyTorch FP32]
+    C --> E[ONNX FP32]
+    C --> F[LiteRT FP16]
+    C --> G[LiteRT INT8 Weight-only]
 
-Flutter tests plus debug and release-mode test APKs:
+    F --> H[Flutter Mobile App]
+    D --> I[FastAPI Reference Service]
+    I --> J[Docker]
+
+    H --> K[Offline Inference]
+    K --> L[Class + Confidence + Bin Colour]
+```
+
+---
+
+## Technical Highlights
+
+- ImageNet-pretrained `MobileNetV3-Small`
+- Transfer learning with PyTorch
+- Comparison of PyTorch, ONNX Runtime, and LiteRT
+- FP16 and INT8 model-size experiments
+- Desktop, server, and Android deployment from the same checkpoint
+- Dart preprocessing validated against the training pipeline
+- Fully offline inference in Flutter
+- Abstention flow for low-confidence predictions
+- Dockerised PyTorch / FastAPI reference service
+- Model Card, Dataset Card, and architecture decisions
+- Reproducible benchmark and export validation workflow
+
+---
+
+## Technology Stack
+
+### Model and evaluation
+
+- Python
+- PyTorch
+- Torchvision
+- ONNX Runtime
+- TensorFlow Lite / LiteRT
+- NumPy
+- scikit-learn
+
+### Mobile
+
+- Flutter
+- Dart
+- Camera and gallery integration
+- On-device LiteRT inference
+
+### Service and deployment
+
+- FastAPI
+- Docker
+- Multipart image upload
+- Health-check and inference endpoints
+
+---
+
+## Quick Start
+
+### Flutter application
 
 ```powershell
 cd apps/mobile
@@ -93,11 +163,15 @@ cd ../..
 .\scripts\build_android.ps1 -Configuration Release
 ```
 
-The release-mode test APK is written to
-`artifacts/mobile/smartwaste-vision-release.apk`. It is currently signed with a
-debug key for testing and is not a Play Store distribution artifact.
+The release-mode test APK is written to:
 
-Reference API:
+```text
+artifacts/mobile/smartwaste-vision-release.apk
+```
+
+This APK is signed with a debug key for testing and is not a Play Store distribution package.
+
+### Docker reference API
 
 ```bash
 docker build -t smartwaste-vision-api .
@@ -105,33 +179,64 @@ docker run --rm -p 8000:8000 smartwaste-vision-api
 curl -F "file=@waste.jpg;type=image/jpeg" http://localhost:8000/v1/classify
 ```
 
+The mobile application does not use the API for inference. The FastAPI service is kept separately to demonstrate server-side deployment of the same FP32 checkpoint.
+
+---
+
+## Repository Structure
+
+```text
+SmartWaste-Vision/
+├── api/                  # FastAPI reference service
+├── apps/mobile/          # Flutter mobile application
+├── docs/                 # Model, dataset, benchmark, and decision documents
+├── scripts/              # Training, export, evaluation, and build scripts
+├── artifacts/            # Test and build outputs
+├── PROJECT_PLAN.md
+├── README.md
+└── README.en.md
+```
+
+---
+
 ## Documentation
 
-- [Model Card](docs/model/MODEL_CARD.en.md)
-- [Dataset Card](docs/data/DATASET_CARD.en.md)
-- [Baseline and export accuracy](docs/model/01-baseline-results.md)
-- [CPU benchmark](docs/benchmarks/02-cpu-baseline-results.md)
+- [Model Card — Turkish](docs/model/MODEL_CARD.md)
+- [Model Card — English](docs/model/MODEL_CARD.en.md)
+- [Dataset Card — Turkish](docs/data/DATASET_CARD.md)
+- [Dataset Card — English](docs/data/DATASET_CARD.en.md)
+- [Baseline and export results](docs/model/01-baseline-results.md)
+- [CPU benchmark report](docs/benchmarks/02-cpu-baseline-results.md)
 - [Flutter MVP and preprocessing validation](docs/mobile/01-flutter-mvp.md)
 - [INT8 deployment decision](docs/decisions/ADR-002-int8-deployment-policy.md)
-- [PyTorch API](api/README.md)
-- [Portfolio release checklist (Turkish)](docs/release/01-portfolio-release-checklist.md)
+- [FastAPI service](api/README.md)
 - [Implementation plan](PROJECT_PLAN.md)
 
-## Limitations
+---
 
-The model expects one clear, dominant object. It is not disposal authority and
-must not be used for hazardous, medical, or electronic waste decisions. The
-training data comes from one Australian facility, plastic is the weakest class,
-and independent phone-captured field evaluation is still required.
+## Scope and Limitations
 
-RealWaste license records conflict: UCI metadata says CC BY 4.0 while the
-downloaded and owner READMEs say CC BY-NC-SA 4.0. This project conservatively
-assumes the more restrictive terms; public/commercial weight distribution needs
-a separate review. See the [Dataset Card](docs/data/DATASET_CARD.en.md).
+SmartWaste Vision:
 
-## Next gate
+- Is designed for one clear, dominant object in a photo
+- Does not perform object detection, segmentation, or multi-object separation
+- Is not a professional decision system for hazardous, medical, or electronic waste
+- Does not provide municipality-specific disposal instructions
+- Uses training data collected from a single Australian facility
+- Shows weaker performance on the plastic class
+- Still requires independent field evaluation with phone-captured images
+- Still requires final latency and RAM measurements on a physical Android device
 
-Install the release-mode APK on a physical Android phone, verify camera/gallery
-and airplane-mode inference, then record model latency, end-to-end mean/p95
-latency, and peak RAM. The redesigned-interface demo is already included in the
-repository.
+### Dataset licence note
+
+RealWaste licence records conflict. UCI metadata lists CC BY 4.0, while the downloaded dataset and owner README files state CC BY-NC-SA 4.0.
+
+This project conservatively follows the more restrictive interpretation. Public or commercial distribution of model weights requires a separate review.
+
+See the [Dataset Card](docs/data/DATASET_CARD.en.md) for details.
+
+---
+
+## Project Goal
+
+This project demonstrates an image classifier that is not left inside a notebook. It covers training, export, benchmarking, mobile integration, and reference API deployment as a complete **end-to-end Edge AI product**.
