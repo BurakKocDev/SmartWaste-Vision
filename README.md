@@ -240,3 +240,12 @@ Ayrıntılar için: [Dataset Card](docs/data/DATASET_CARD.md)
 ## Projenin Amacı
 
 Bu çalışma, bir görüntü sınıflandırma modelinin yalnızca notebook ortamında bırakılmadığı; eğitimden export sürecine, benchmarklardan mobil entegrasyona ve referans API dağıtımına kadar tamamlanan bir **uçtan uca Edge AI ürünü** sunmayı amaçlamaktadır.
+
+---
+
+## Lisans
+
+Özgün kaynak kodu ve dokümantasyon [MIT lisansı](LICENSE) ile sunulur. RealWaste
+verisi, üçüncü taraf görseller ve bunlardan türetilen model ağırlıkları bu
+lisansın kapsamında değildir; ayrıntılar [üçüncü taraf bildiriminde](THIRD_PARTY_NOTICES.md)
+ve veri/model kartlarında açıklanır.
