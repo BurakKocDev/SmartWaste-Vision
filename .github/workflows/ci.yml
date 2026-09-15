@@ -15,7 +15,6 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-          cache: pip
       - name: Install lightweight test dependency
         run: python -m pip install pytest==9.1.1
       - name: Validate deterministic dataset contract
